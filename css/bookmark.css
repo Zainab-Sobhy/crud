@@ -1,0 +1,66 @@
+body {
+    background-color: #f7ecde;
+    font: 700 16px "PT Sans Caption", sans-serif;
+}
+
+::selection {
+    background-color: #fec260;
+}
+
+h1 {
+    font: 500 50px "Pacifico", "cursive";
+    position: relative;
+    width: fit-content;
+}
+
+h1::before {
+    content: "";
+    width: 260px;
+    height: 20px;
+    transition: all 0.3s;
+    position: absolute;
+    bottom: 20px;
+    background-color: #fec260;
+    z-index: -1;
+}
+h1:hover::before{
+    height: 35px;
+}
+
+.dot {
+    border-width: 2px 0px;
+    border-style: dotted;
+    border-color: black;
+}
+
+h2 {
+    font: 500 25px "Righteous", sans-serif;
+    background-image: linear-gradient(to right, #3ca55c, #b5ac49);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+.btnsubmit {
+    background-color: #d1512d;
+    color: white;
+}
+
+.btnsubmit:hover {
+    background-color: #bb4120;
+    color: white;
+}
+
+table {
+    background-color: #f8f9fa;
+}
+
+.form-control:focus {
+    border-color: #d99c39;
+    box-shadow: 0 0 0 0.25rem #fec26055;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}

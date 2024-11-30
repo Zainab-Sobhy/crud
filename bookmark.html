@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark</title>
+    <link rel="icon" href="star.png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bookmark.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="mt-5 mx-auto">Bookmarker</h1>
+        <div class="dot mx-auto my-5 py-3 ">
+            <h2 class="d-flex justify-content-center mb-5"><i class="fa-solid fa-bookmark"></i>&nbsp;Bookmark your
+                favorite sites&nbsp;<i class="fa-solid fa-bookmark"></i></h2>
+            <label for="bookname" class="mb-2"><i class="fa fa-solid fa-book-bookmark"></i> Site Name:</label>
+            <input id="bookname" type="text"  class="form-control mb-3 " placeholder="Bookmark Name">
+            <label for="url" class="mb-2"><i class="fa-solid fa-link"></i> Site URL:</label>
+            <input id="url" type="text" class="form-control mb-3" placeholder="Website URL">
+            <label for="search" class="mb-2"><i class="fa-solid fa-search"></i> Search:</label>
+            <input id="search" type="text" class="form-control mb-3"
+                placeholder="Search By Name...">
+            <div class="d-flex justify-content-center">
+                <button  id="submitBtn" class="btn btnsubmit px-5">Submit</button>
+                <button  id="updateBtn" class="btn btn-warning text-white d-none px-5">Update</button>
+            </div>
+        </div>
+        <table cellpadding="4" class="w-100 my-5">
+            <thead>
+                <tr class="text-center">
+                    <th class="px-md-5">Index</th>
+                    <th class="px-md-5">Website Name</th>
+                    <th class="px-md-5">Visit</th>
+                    <th class="px-md-5">Delete</th>
+                    <th class="px-md-5">Update</th>
+                </tr>
+            </thead>
+            <tbody  id="table"></tbody>
+        </table>
+    </div>
+    <script src="js/bookmark.js"></script>
+    <script src="./js/bootstrap.bundle.js"></script>
+</body>
+
+</html>
