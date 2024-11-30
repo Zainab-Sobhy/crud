@@ -23,27 +23,29 @@ function addBookmark() {
         bookmarkUrl: bookmarkUrl.value
     }
 
-    // if (bookmarkContainer.length === 0) {
-    //     bookmarkContainer.push(bookMark);
-    //     localStorage.setItem("bookmark", JSON.stringify(bookmarkContainer));
-    //     clearInputs();
-    //     displayBookmark(bookmarkContainer);
-    //     return;
-    // } 
+    if (bookmarkContainer.length === 0) {
+        bookmarkContainer.push(bookMark);
+        localStorage.setItem("bookmark", JSON.stringify(bookmarkContainer));
+        clearInputs();
+        displayBookmark(bookmarkContainer);
+        return;
+    } 
    
-    // else{
-    //     for (var i = 0; i < bookmarkContainer.length; i++) {
-    //         if (bookmarkContainer[i].bookName === bookMark.bookName) {
-    //             alert("This bookmark name already exists!");
-    //             clearInputs();
-    //             return;
-    //         }
-    //     }
-    // }
+    else{
+        for (var i = 0; i < bookmarkContainer.length; i++) {
+            if (bookmarkContainer[i].bookName === bookMark.bookName) {
+                alert("This bookmark name already exists!");
+                clearInputs();
+                return;
+            }
+        }
+    }
     bookmarkContainer.push(bookMark);
     localStorage.setItem("bookmark", JSON.stringify(bookmarkContainer));
     clearInputs();
-    displayBookmark(bookmarkContainer)
+    displayBookmark(bookmarkContainer);
+    bookmarkName.classList.remove("is-valid");
+    bookmarkUrl.classList.remove("is-valid");
 }
 // Display Bookmark
 function displayBookmark(arr) {
@@ -116,6 +118,24 @@ function validate(val) {
     else {
         val.classList.remove('is-valid');
         val.classList.add('is-invalid');
+        
+        // submitBtn.addEventListener('click', function () {
+        //     swal.fire(
+        //         {
+        //             html: `
+        //             <div class="text-start">
+        //             <i style="color:red" class="fa fa-solid fa-circle"></i>
+        //             <i style="color:yellow" class="fa fa-solid fa-circle"></i>
+        //             <i style="color:green" class="fa fa-solid fa-circle"></i>
+        //             <h3 class="my-3">Site Name or Url is not valid, Please follow the rules below :</h3>
+        //             <h4><i style="color:red" class="fa fa-solid fa-sm fa-arrow-alt-circle-right"></i> Site name must contain at least 3 characters</h4>
+        //             <h4><i style="color:red" class="fa fa-solid fa-sm fa-arrow-alt-circle-right"></i> Site URL must be a valid one</h4>
+        //             </div>`,
+        //             showCloseButton: true,
+        //             showConfirmButton: false
+        //         }
+        //     )
+        // })
     }
 
 }
